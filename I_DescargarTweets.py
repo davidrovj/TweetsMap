@@ -15,11 +15,6 @@ from credentials import *
 
 # In[]:
 """Establecer acceso a la API de Twitter."""
-CONSUMER_KEY = "uvcMjAH4FJglTG8QS9zlpJC01"
-CONSUMER_SECRET = 'Ed2c2FhXzpHFagbfTVb3gTnziNTQ3hDk0UDRiiraPfupO5At0s'
-ACCESS_TOKEN = "1442475234913775619-hKJkC4Pp3N0ztkvGAue6niVGtra8YZ"
-ACCESS_SECRET = "QqW0LjrlYr1YrkllT1RhMbi4LmUvARaecltG6HTzAobUf"
-
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
@@ -98,7 +93,7 @@ class listener(tweepy.StreamListener):
 definido en la clase anterior.
 
 Salidas:
-    En consol:
+    En consola:
         [1] Starting…
         [2] Done!
     Archivos:
@@ -109,7 +104,6 @@ if __name__ == '__main__':
     print('Starting...')
     #Crear un Stream, estableciendo el número de tweets que se desean guardar
     twitterStream = tweepy.Stream(auth, listener(numero_tweets = 47))
-    
     #Iniciar un Stream (Puede tomar mucho tiempo en terminar)
     #Mas info. en: https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters
     twitterStream.filter(locations = tampico_madero)
