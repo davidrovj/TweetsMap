@@ -47,11 +47,11 @@ OPCION 2: Usando el simbolo del sistema
 * Informacion sobre los comandos de heatmap.py en: http://www.sethoscope.net/heatmap/
 """
 #[Mapa con nombres]
-python heatmap.py -o maps/map_tweets_tam_mad_01.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base http://tile.memomaps.de/tilegen --decay 0.8 -r 10 --zoom 0 --margin 15
+##python heatmap.py -o maps/map_tweets_tam_mad_01.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base http://tile.memomaps.de/tilegen --decay 0.8 -r 10 --zoom 0 --margin 15
 #[Mapa Obscuro]
-python heatmap.py -o maps/map_tweets_tam_mad_02.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base  https://basemaps.cartocdn.com/rastertiles/dark_all --decay 0.8 -r 10 --zoom 0 --margin 15
+#python heatmap.py -o maps/map_tweets_tam_mad_02.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base  https://basemaps.cartocdn.com/rastertiles/dark_all --decay 0.8 -r 10 --zoom 0 --margin 15
 #[Mapa Claro]
-python heatmap.py -o maps/map_tweets_tam_mad_03.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base  https://basemaps.cartocdn.com/rastertiles/light_all --decay 0.8 -r 10 --zoom 0 --margin 15
+#python heatmap.py -o maps/map_tweets_tam_mad_03.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base  https://basemaps.cartocdn.com/rastertiles/light_all --decay 0.8 -r 10 --zoom 0 --margin 15
 
 # In[]:
 """Agregar una leyenda al mapa de los tweets.
@@ -123,7 +123,7 @@ OPCION 2: Usando el simbolo del sistema.
 - Navegar hasta el directorio del proyecto.
 - Ejecutar el siguiente comando.
 """
-python heatmap.py -G gradients/gradient_blue.png -o maps/map_tweets_tam_mad_02.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base  https://basemaps.cartocdn.com/rastertiles/dark_all --decay 0.8 -r 10 --zoom 0 --margin 15
+#python heatmap.py -G gradients/gradient_blue.png -o maps/map_tweets_tam_mad_02.png --width 1920 -p heatmap-files/tweets_heatmap_tam_mad -b black -P equirectangular --osm --osm_base  https://basemaps.cartocdn.com/rastertiles/dark_all --decay 0.8 -r 10 --zoom 0 --margin 15
 
 im = PIL.Image.open('maps/map_tweets_tam_mad_02.png')
 draw = ImageDraw.Draw(im)
